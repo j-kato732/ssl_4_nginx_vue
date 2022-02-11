@@ -1,0 +1,20 @@
+version: "3"
+
+services:
+  nginx:
+    container_name: nginx
+    build: 
+      context: .
+      dockerfile: ./nginx/Dockerfile
+    ports: 
+      - "8000:80"
+
+  vue:
+    container_name: vue
+    build: ./vue
+    volumes:
+      - ./vue/app:/app
+    ports: 
+      - "8080:8080"
+    tty: true
+    stdin_open: true
