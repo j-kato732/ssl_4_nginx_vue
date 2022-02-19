@@ -9,3 +9,5 @@ FROM nginx:1.17.10-alpine as production-stage
 RUN mkdir /app
 COPY --from=build-stage /app/dist /app
 COPY nginx/nginx.conf /etc/nginx/nginx.conf
+COPY keys/localhost.key /etc/nginx/ssl/localhost.key
+COPY keys/localhost.crt /etc/nginx/ssl/localhost.crt

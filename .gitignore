@@ -1,0 +1,8 @@
+keys/localCA.crt
+keys/localCA.csr
+keys/localCA.key
+keys/localCA.srl
+keys/localhost.crt
+keys/localhost.csr
+keys/localhost.csx
+keys/localhost.key
