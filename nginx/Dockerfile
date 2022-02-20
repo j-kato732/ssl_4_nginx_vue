@@ -10,4 +10,4 @@ RUN mkdir /app
 COPY --from=build-stage /app/dist /app
 COPY nginx/nginx.conf /etc/nginx/nginx.conf
 COPY keys/localhost.key /etc/nginx/ssl/localhost.key
-COPY keys/localhost.crt /etc/nginx/ssl/localhost.crt
+COPY keys/localhost-sha256.crt /etc/nginx/ssl/localhost-sha256.crt
